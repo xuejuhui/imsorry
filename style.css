@@ -58,21 +58,22 @@ body {
 .center div:nth-child(1):before {
   animation: animate 1s linear forwards;
   transform-origin: right;
+  animation-delay: 12s;
 }
 .center div:nth-child(2):before {
   animation: animate 1s linear forwards;
   transform-origin: left;
-  animation-delay: 1s;
+  animation-delay: 13s;
 }
 .center div:nth-child(3):before {
   animation: animate 1s linear forwards;
   transform-origin: right;
-  animation-delay: 2s;
+  animation-delay: 14s;
 }
 .center div:nth-child(4):before {
   animation: animate 1s linear forwards;
   transform-origin: left;
-  animation-delay: 3s;
+  animation-delay: 15s;
   width: 60%;
   left: 0;
 }
@@ -110,13 +111,13 @@ body {
 .center div:nth-child(1) h2 {
   padding: 40px 0 0 0;
   animation: fadeText 0.5s linear forwards;
-  animation-delay: 1s;
+  animation-delay: 13s;
   font-size: 40px;
 }
 .center div:nth-child(3) h2 {
     padding: 0;
   animation: fadeText 0.5s linear forwards;
-  animation-delay: 3s;
+  animation-delay: 15s;
   font-size: 90px;
   font-weight: 800;
 }
@@ -148,4 +149,80 @@ body {
     font-size: 150%;
     font-weight: 800;
   }
+}
+
+.loading 
+{
+    position: fixed;
+    top:0;
+    left: 0;
+    width: 100%;
+    height:100%;
+    background: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 15;
+    animation: fadeout 11s linear forwards;
+}
+
+@keyframes fadeout
+{
+    0%, 91%
+    {
+        opacity: 1;
+        visibility: visible;
+    }
+    100%
+    {
+        opacity: 0;
+        visibility: hidden;
+    }
+
+}
+
+.loading h2 
+{
+    color: #000;
+}
+.loading .bar
+{
+    position: relative;
+    width: 400px;
+    height: 40px;
+    border: 2px solid #000;
+    background: transparent;
+    margin: 0 20px;
+    box-sizing: border-box;
+
+}
+.loading .bar:before
+{
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: #000;
+    transform-origin: left;
+    animation: animate 10s linear forwards;
+
+}
+.loading .bar:after
+{
+    content: 'loading';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    font-weight: 800;
+    text-transform: uppercase;
+    letter-spacing: 10px;
+    text-align: center;
+    line-height: 36px;
+    color: #fff;
+    font-size: 20px;
+    mix-blend-mode: difference;
 }
