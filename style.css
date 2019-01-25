@@ -108,12 +108,13 @@ body {
 }
 
 .center div:nth-child(1) h2 {
+  padding: 40px 0 0 0;
   animation: fadeText 0.5s linear forwards;
   animation-delay: 1s;
   font-size: 40px;
-
 }
 .center div:nth-child(3) h2 {
+    padding: 0;
   animation: fadeText 0.5s linear forwards;
   animation-delay: 3s;
   font-size: 90px;
@@ -126,5 +127,25 @@ body {
   }
   100% {
     opacity: 1;
+  }
+}
+
+@media only screen and (max-width: 600px) {
+  .center {
+    position: relative;
+    width: 50%;
+  }
+  .center div:nth-child(1) h2 {
+    padding: 60px 0 0 0;
+    animation: fadeText 0.5s linear forwards;
+    animation-delay: 1s;
+    font-size: 100%;
+  }
+  .center div:nth-child(3) h2 {
+    padding: 60px 0 0 0;
+    animation: fadeText 0.5s linear forwards;
+    animation-delay: 3s;
+    font-size: 150%;
+    font-weight: 800;
   }
 }
