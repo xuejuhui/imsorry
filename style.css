@@ -58,22 +58,22 @@ body {
 .center div:nth-child(1):before {
   animation: animate 1s linear forwards;
   transform-origin: right;
-  animation-delay: 12s;
+  animation-delay: 2s;
 }
 .center div:nth-child(2):before {
   animation: animate 1s linear forwards;
   transform-origin: left;
-  animation-delay: 13s;
+  animation-delay: 3s;
 }
 .center div:nth-child(3):before {
   animation: animate 1s linear forwards;
   transform-origin: right;
-  animation-delay: 14s;
+  animation-delay: 4s;
 }
 .center div:nth-child(4):before {
   animation: animate 1s linear forwards;
   transform-origin: left;
-  animation-delay: 15s;
+  animation-delay: 5s;
   width: 60%;
   left: 0;
 }
@@ -111,13 +111,13 @@ body {
 .center div:nth-child(1) h2 {
   padding: 40px 0 0 0;
   animation: fadeText 0.5s linear forwards;
-  animation-delay: 13s;
+  animation-delay: 4s;
   font-size: 40px;
 }
 .center div:nth-child(3) h2 {
     padding: 0;
   animation: fadeText 0.5s linear forwards;
-  animation-delay: 15s;
+  animation-delay: 6s;
   font-size: 90px;
   font-weight: 800;
 }
