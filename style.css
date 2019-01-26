@@ -115,7 +115,7 @@ body {
   font-size: 40px;
 }
 .center div:nth-child(3) h2 {
-    padding: 0;
+  padding: 0;
   animation: fadeText 0.5s linear forwards;
   animation-delay: 6s;
   font-size: 90px;
@@ -154,19 +154,16 @@ body {
   }
 }
 
-@keyframes fadeout
-{
-    0%, 91%
-    {
-        opacity: 1;
-        visibility: visible;
-    }
-    100%
-    {
-        opacity: 0;
-        visibility: hidden;
-    }
-
+@keyframes fadeout {
+  0%,
+  91% {
+    opacity: 1;
+    visibility: visible;
+  }
+  100% {
+    opacity: 0;
+    visibility: hidden;
+  }
 }
 
 #present {
@@ -182,7 +179,7 @@ body {
   z-index: 15;
 }
 #present img.apply-shake {
-  animation: wobble 0.82s cubic-bezier(.36, .07, .19, .97) both;
+  animation: wobble 0.82s cubic-bezier(0.36, 0.07, 0.19, 0.97) both;
   backface-visibility: hidden;
   perspective: 1000px;
 }
