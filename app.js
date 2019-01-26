@@ -1,5 +1,9 @@
 document.addEventListener('DOMContentLoaded', () => {
-
+    function playSong() {
+        let birthdaySong = document.getElementById('birthday-song')
+        birthdaySong.play()
+      }
+      
     (function frame() {
         // launch a few confetti from the left edge
         confetti({
@@ -19,6 +23,7 @@ document.addEventListener('DOMContentLoaded', () => {
         // keep going
         if (Date.now()) {
             requestAnimationFrame(frame);
+            playSong();
         }
     }());
 })
