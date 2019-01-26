@@ -136,16 +136,19 @@ body {
     position: relative;
     width: 50%;
   }
+  .center div {
+    height: 100px;
+  }
   .center div:nth-child(1) h2 {
-    padding: 60px 0 0 0;
+    padding: 35px 0 0 0;
     animation: fadeText 0.5s linear forwards;
-    animation-delay: 1s;
+    animation-delay: 4s;
     font-size: 100%;
   }
   .center div:nth-child(3) h2 {
-    padding: 60px 0 0 0;
+    padding: 35px 0 0 0;
     animation: fadeText 0.5s linear forwards;
-    animation-delay: 3s;
+    animation-delay: 6s;
     font-size: 150%;
     font-weight: 800;
   }
