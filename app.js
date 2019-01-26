@@ -4,7 +4,7 @@ document.addEventListener('DOMContentLoaded', () => {
         birthdaySong.play()
       }
       
-    function showConfetti() {
+(    function showConfetti() {
         // launch a few confetti from the left edge
         confetti({
             particleCount: 7,
@@ -25,5 +25,5 @@ document.addEventListener('DOMContentLoaded', () => {
             requestAnimationFrame(showConfetti);
             playSong();
         }
-    };
+    }());
 })

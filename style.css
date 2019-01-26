@@ -154,21 +154,6 @@ body {
   }
 }
 
-.loading 
-{
-    position: fixed;
-    top:0;
-    left: 0;
-    width: 100%;
-    height:100%;
-    background: #fff;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    z-index: 15;
-    animation: fadeout 11s linear forwards;
-}
-
 @keyframes fadeout
 {
     0%, 91%
@@ -184,48 +169,40 @@ body {
 
 }
 
-.loading h2 
-{
-    color: #000;
+#present {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 15;
 }
-.loading .bar
-{
-    position: relative;
-    width: 400px;
-    height: 40px;
-    border: 2px solid #000;
-    background: transparent;
-    margin: 0 20px;
-    box-sizing: border-box;
+#present img.apply-shake {
+  animation: wobble 0.82s cubic-bezier(.36, .07, .19, .97) both;
+  backface-visibility: hidden;
+  perspective: 1000px;
+}
 
-}
-.loading .bar:before
-{
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: #000;
-    transform-origin: left;
-    animation: animate 10s linear forwards;
-
-}
-.loading .bar:after
-{
-    content: 'loading';
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    font-weight: 800;
-    text-transform: uppercase;
-    letter-spacing: 10px;
-    text-align: center;
-    line-height: 36px;
-    color: #fff;
-    font-size: 20px;
-    mix-blend-mode: difference;
+@keyframes wobble {
+  10%,
+  90% {
+    transform: rotate(-2deg);
+  }
+  20%,
+  80% {
+    transform: rotate(6deg);
+  }
+  30%,
+  50%,
+  70% {
+    transform: rotate(-2deg);
+  }
+  40%,
+  60% {
+    transform: rotate(6deg);
+  }
 }
