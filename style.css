@@ -104,7 +104,7 @@ body {
   padding: 0;
   z-index: 10;
   opacity: 0;
-  color: aliceblue;
+  color: rgb(243, 247, 252);
   text-align: center;
 }
 
@@ -116,11 +116,19 @@ body {
 }
 .center div:nth-child(3) h2 {
   padding: 0;
-  animation: fadeText 0.5s linear forwards;
+  animation: fadeText 0.5s linear forwards,neon2 1.5s ease-in-out infinite alternate;
   animation-delay: 6s;
   font-size: 90px;
   font-weight: 800;
+
 }
+
+/* .center div:nth-child(3) h2:hover {
+  -webkit-animation: neon2 1.5s ease-in-out infinite alternate;
+  -moz-animation: neon2 1.5s ease-in-out infinite alternate;
+  animation: neon2 1.5s ease-in-out infinite alternate;
+} */
+
 
 @keyframes fadeText {
   0% {
@@ -151,6 +159,7 @@ body {
     animation-delay: 6s;
     font-size: 150%;
     font-weight: 800;
+
   }
 }
 
@@ -201,5 +210,15 @@ body {
   40%,
   60% {
     transform: rotate(6deg);
+  }
+}
+
+
+@keyframes neon2 {
+  from {
+    text-shadow: 0 0 10px #000000, 0 0 20px #000000, 0 0 30px #000000, 0 0 40px #fff, 0 0 70px #fff, 0 0 80px #fff, 0 0 100px #fff, 0 0 150px #fff;
+  }
+  to {
+    text-shadow: 0 0 5px #000000 , 0 0 10px #000000, 0 0 15px #000000, 0 0 20px #fff, 0 0 35px #fff, 0 0 40px #fff, 0 0 50px #fff, 0 0 75px #fff;
   }
 }
