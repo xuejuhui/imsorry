@@ -1,13 +1,13 @@
 document.addEventListener("DOMContentLoaded", () => {
   class Birthday {
     static playSong() {
-      let birthdaySong = document.getElementById("birthday-song");
+      const birthdaySong = document.getElementById("birthday-song");
       birthdaySong.play();
     }
     static openBox() {
       let sec = 1;
-      let gift = document.getElementById("gift");
-      let present = document.getElementById("present");
+      const gift = document.getElementById("gift");
+      const present = document.getElementById("present");
       // reset animation
       const shake = setInterval(function() {
         // -> delete class
@@ -29,8 +29,8 @@ document.addEventListener("DOMContentLoaded", () => {
       }, 1000);
     }
     static fade(element) {
-      var op = 1; // initial opacity
-      var timer = setInterval(function() {
+      let op = 1; // initial opacity
+      const timer = setInterval(function() {
         if (op <= 0.1) {
           clearInterval(timer);
           element.style.display = "none";
@@ -71,6 +71,17 @@ document.addEventListener("DOMContentLoaded", () => {
       }
     }
   }
-  let present = document.getElementById("present");
-  present.addEventListener("click", Birthday.openBox);
+  const present = document.getElementById("present");
+  let click = false;
+    present.addEventListener("click", () => {
+      if(click){
+        console.log('already clicked')
+        return 
+      } else {
+        console.log('first click')
+        Birthday.openBox();
+        click = true;
+      }
+
+    });
 });
