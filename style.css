@@ -2,17 +2,21 @@
 body {
   margin: 0;
   padding: 0;
-  display: flex;
-  justify-content: center;
-  align-items: center;
   height: 100vh;
   overflow: hidden;
   font-family: "Poppins", sans-serif;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: 25% auto 25%;
+  grid-template-areas: 
+  ". . date"
+  ". main ."
+  ". . .";
 }
-
 .center {
   position: relative;
-  width: 600px;
+  width: 100%;
+  grid-area:main;
 }
 
 .center div {
@@ -116,19 +120,12 @@ body {
 }
 .center div:nth-child(3) h2 {
   padding: 0;
-  animation: fadeText 0.5s linear forwards,neon2 1.5s ease-in-out infinite alternate;
+  animation: fadeText 0.5s linear forwards,
+    neon2 1.5s ease-in-out infinite alternate;
   animation-delay: 6s;
   font-size: 90px;
   font-weight: 800;
-
 }
-
-/* .center div:nth-child(3) h2:hover {
-  -webkit-animation: neon2 1.5s ease-in-out infinite alternate;
-  -moz-animation: neon2 1.5s ease-in-out infinite alternate;
-  animation: neon2 1.5s ease-in-out infinite alternate;
-} */
-
 
 @keyframes fadeText {
   0% {
@@ -140,7 +137,17 @@ body {
 }
 
 @media only screen and (max-width: 600px) {
+  body {
+    grid-template-columns:1fr;
+    grid-template-rows: 25% auto 25%;
+    grid-template-areas: 
+    "date"
+    "main"
+    ".";
+  }
   .center {
+    margin-top: 20%;
+    margin-left: 20%;
     position: relative;
     width: 50%;
   }
@@ -159,7 +166,9 @@ body {
     animation-delay: 6s;
     font-size: 150%;
     font-weight: 800;
-
+  }
+  .date h1 {
+    transform: translate(20%,20%); 
   }
 }
 
@@ -187,6 +196,12 @@ body {
   align-items: center;
   z-index: 15;
 }
+/* #present:before {
+  content: 'Click Me';
+  color: #ff0058;
+  font-size: 50px;
+} */
+
 #present img.apply-shake {
   animation: wobble 0.82s cubic-bezier(0.36, 0.07, 0.19, 0.97) both;
   backface-visibility: hidden;
@@ -213,12 +228,60 @@ body {
   }
 }
 
-
 @keyframes neon2 {
   from {
-    text-shadow: 0 0 10px #000000, 0 0 20px #000000, 0 0 30px #000000, 0 0 40px #fff, 0 0 70px #fff, 0 0 80px #fff, 0 0 100px #fff, 0 0 150px #fff;
+    text-shadow: 0 0 10px #000000, 0 0 20px #000000, 0 0 30px #000000,
+      0 0 40px #fff, 0 0 70px #fff, 0 0 80px #fff, 0 0 100px #fff,
+      0 0 150px #fff;
   }
   to {
-    text-shadow: 0 0 5px #000000 , 0 0 10px #000000, 0 0 15px #000000, 0 0 20px #fff, 0 0 35px #fff, 0 0 40px #fff, 0 0 50px #fff, 0 0 75px #fff;
+    text-shadow: 0 0 5px #000000, 0 0 10px #000000, 0 0 15px #000000,
+      0 0 20px #fff, 0 0 35px #fff, 0 0 40px #fff, 0 0 50px #fff, 0 0 75px #fff;
+  }
+}
+
+.date {
+  display: flex;
+  font-size: 30px;
+  font-weight: bold;
+  grid-area: date;
+}
+.date h1 {
+  transform: rotate(25deg) translate(20%,20%); 
+  background-image: -webkit-gradient(
+    linear,
+    left top,
+    right top,
+    color-stop(0, #f22),
+    color-stop(0.15, #f2f),
+    color-stop(0.3, #22f),
+    color-stop(0.45, #2ff),
+    color-stop(0.6, #2f2),
+    color-stop(0.75, #2f2),
+    color-stop(0.9, #ff2),
+    color-stop(1, #f22)
+  );
+  background-image: gradient(
+    linear,
+    left top,
+    right top,
+    color-stop(0, #f22),
+    color-stop(0.15, #f2f),
+    color-stop(0.3, #22f),
+    color-stop(0.45, #2ff),
+    color-stop(0.6, #2f2),
+    color-stop(0.75, #2f2),
+    color-stop(0.9, #ff2),
+    color-stop(1, #f22)
+  );
+  color: transparent;
+  -webkit-background-clip: text;
+  background-clip: text;
+  animation: slidebg 5s linear infinite;
+}
+
+@keyframes slidebg {
+  to {
+    background-position: 20vw;
   }
 }
