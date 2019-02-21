@@ -230,12 +230,12 @@ body {
 
 @keyframes neon2 {
   from {
-    text-shadow: 0 0 10px #000000, 0 0 20px #000000, 0 0 30px #000000,
+    text-shadow: 0 0 10px #ca8c18, 0 0 20px #ffdf27, 0 0 30px #dadd15,
       0 0 40px #fff, 0 0 70px #fff, 0 0 80px #fff, 0 0 100px #fff,
       0 0 150px #fff;
   }
   to {
-    text-shadow: 0 0 5px #000000, 0 0 10px #000000, 0 0 15px #000000,
+    text-shadow: 0 0 5px #393be0, 0 0 10px #26a1da, 0 0 15px #29d6ce,
       0 0 20px #fff, 0 0 35px #fff, 0 0 40px #fff, 0 0 50px #fff, 0 0 75px #fff;
   }
 }
