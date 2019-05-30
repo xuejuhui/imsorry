@@ -8,15 +8,15 @@ body {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
   grid-template-rows: 25% auto 25%;
-  grid-template-areas: 
-  ". . date"
-  ". main ."
-  ". . .";
+  grid-template-areas:
+    ". . date"
+    ". main ."
+    ". . .";
 }
 .center {
   position: relative;
   width: 100%;
-  grid-area:main;
+  grid-area: main;
 }
 
 .center div {
@@ -138,12 +138,12 @@ body {
 
 @media only screen and (max-width: 600px) {
   body {
-    grid-template-columns:1fr;
+    grid-template-columns: 1fr;
     grid-template-rows: 25% auto 25%;
-    grid-template-areas: 
-    "date"
-    "main"
-    ".";
+    grid-template-areas:
+      "date"
+      "main"
+      ".";
   }
   .center {
     margin-top: 20%;
@@ -168,7 +168,10 @@ body {
     font-weight: 800;
   }
   .date h1 {
-    transform: translate(20%,20%); 
+    transform: translate(20%, 20%);
+  }
+  #sorry-dog {
+    z-index: 100;
   }
 }
 
@@ -247,7 +250,7 @@ body {
   grid-area: date;
 }
 .date h1 {
-  transform: rotate(25deg) translate(20%,20%); 
+  transform: rotate(25deg) translate(20%, 20%);
   background-image: -webkit-gradient(
     linear,
     left top,
@@ -278,6 +281,12 @@ body {
   -webkit-background-clip: text;
   background-clip: text;
   animation: slidebg 5s linear infinite;
+}
+
+#sorry-dog {
+  position: relative;
+  top: 200%;
+  left: 50%;
 }
 
 @keyframes slidebg {

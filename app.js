@@ -73,15 +73,14 @@ document.addEventListener("DOMContentLoaded", () => {
   }
   const present = document.getElementById("present");
   let click = false;
-    present.addEventListener("click", () => {
-      if(click){
-        console.log('already clicked')
-        return 
-      } else {
-        console.log('first click')
-        Birthday.openBox();
-        click = true;
-      }
-
-    });
+  present.addEventListener("click", () => {
+    if (click) {
+      console.log("already clicked");
+      return;
+    } else {
+      console.log("first click");
+      Birthday.openBox();
+      click = true;
+    }
+  });
 });
